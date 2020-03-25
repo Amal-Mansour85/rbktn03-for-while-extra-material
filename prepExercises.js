@@ -2,6 +2,13 @@
 // Basic Requirments
 // 1.Summation to n: Let's implement the function sum that takes a single parameter n, and computes the sum of all integers up to n starting from 0, e.g.:
 //  function sum(n) { 
+	function sum(n){
+	while (n>0){
+
+	return n + sum(n-1);
+}
+    return n; 
+}
 //  // TODO: your code here 
 //  } 
 //  sum(3); // => 6 
@@ -12,6 +19,14 @@
 
 // 2.Factorial of n: The factorial of n is the product of all the integers preceding n, starting with 1, e.g.:
 //  function factorial(n) { 
+	function factorial(n) {
+	var total =1
+	while (n===1){
+		return n * factorial(n-1);
+	}
+	return total;
+}
+
 //  // TODO: your code here 
 //  } 
 //  factorial(3); // => 6 
@@ -22,6 +37,13 @@
 
 // 3.Repeating a String n Times: Let's write a function called repeatString that takes two parameters: a string str, which is the string to be repeated, and count -- a number representing how many times the string s should be repeated, e.g.
 //  function repeatString(str, count) { 
+	function repeatString(str, count) {
+	while (count>0){
+		count= count-1;
+	 return repeatString (str, count);
+	}
+}
+
 //  // TODO: your code here 
 //  } 
 //  repeatString('dog', 0); // => '' 
@@ -39,6 +61,21 @@
 
 // 2.Fencepost Loop: Use a while loop to build a single string with the numbers 1 through n, separated by commas. Have it return the new string. How can we make sure not to have a comma after the last number?
 //  function counting(n) { 
+
+	var counter = 1; 
+ var total = ''; 
+ var comma = ', '; 
+ while (counter <= n) { 
+ if (counter !== n) { 
+ total = total + counter + comma; 
+ } else { 
+ total = total + counter; 
+ } 
+ counter = counter + 1; 
+ } 
+ return total; 
+ }
+
 //        // TODO: your code here 
 //  } 
 //  counting(5); // => '1, 2, 3, 4, 5' 
@@ -61,6 +98,18 @@
 
 // 4.Reverse String: Write a function that takes a string as an input and returns the reverse of that string.
 //  function reverseString(str) { 
+function reverseString(str) { 
+ var counter = str.length-1; 
+ var total = ''; 
+ while (counter >= 0) { 
+ total = total + str[counter]; 
+ counter = counter - 1; 
+ } 
+ return total; 
+}
+
+
+
 //        // TODO: your code here 
 //  } 
 //  reverseString('hello'); // => 'olleh' 
@@ -72,6 +121,21 @@
 // 5.Write a javascript program to print all Prime numbers from 1 to n.
 
 
+function primeNumber(n){  
+  if (n === 1) { 
+    return false; 
+  } else if (n === 2) { 
+    return true; 
+  } else { 
+    for (var x = 2; x < n; x++) { 
+      if (n % x === 0) { 
+        return false; 
+      } 
+    } 
+    return true; 
+  } 
+} 
+  
 
 
 // 6.Write a JavaScript for loop that will iterate from 0 to n. For each iteration, it will check if the current number is odd or even, and display a message to the screen.
@@ -80,10 +144,32 @@
 //  '1 is odd' 
 //  '2 is even'
 
+ function isEven(n) { 
+ 
+	if(n > 0) {
+
+		return true;
+
+	} else if (n < 0) 
+
+		return false ;
+}
+
+
+
 
 
 
 // 7.Write a javascript program to enter any number and print all factors of the number.
+
+function factors (number){
+     var total =1
+	while (n===1){
+		return n * factorial(n-1);
+	}
+	return total;
+}
+
 
 
 
@@ -95,8 +181,14 @@
 //  firstAndLast(123) ==> 1 + 3 = 4 
 //  firstAndLast(197) ==> 1 + 7 = 8
 
-
-
+function firstAndLast (num){
+  var counter = 0
+  for (var i =0 ;i<= n;i++){
+      count+=i ;
+  }
+  return count ;
+  }
+  
 
 // 2.Write a javascript program to draw the stars
 //      * 
@@ -105,9 +197,22 @@
 //   ******* 
 //  ********* 
 //   ******* 
-//    ***** 
+//    *****
 //     *** 
 //      *
+     * 
+    *** 
+   ***** 
+  ******* 
+ ********* 
+  ******* 
+   ***** 
+    *** 
+     *
+
+
+
+
 
 
 
