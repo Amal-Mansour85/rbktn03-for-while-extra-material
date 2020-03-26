@@ -3,10 +3,47 @@
 
 // 1.Write a function sum that computes the sum of the numbers in an array.
 
+var arr =[1,2,3,4,5];
+
+function sum(arr) {
+	var totale = 0;
+	for(var i = 0; i< arr.length ;i++){
+		
+		totale = totale + arr[i];
+	}
+	  return totale;
+
+}
+    
+
 // 2.Write a function max that accepts an array of numbers and returns the largest number in the array.
+  var array =[1,2,3,4,5,6,7,8,9];
 
+  function max (array){
+  	var x = 0;
+  	for(var i = 0; i< array.length ;i++){
+  		if(array[i] > x){
+  		
+  		x = array[i]
+  	}
+   return x;
+  }
 // 3.Try the following at a console:
+     function longestWord (str){
+     	var strAr = str.split("");
+     	var longest = strAr [i]
 
+     for(var i = 0; i<strAr.length ; i++){
+
+     if(longest.length < strAr[i].length){ 
+ 	 	 	 
+
+ 	 	  longest=strAr[i];
+     	
+}
+
+     	return longest ;
+     }
 //  'the quick brown fox jumped over the lazy dog'.split(' ');
 //  'Hello, world!'.split('')
 //  '1,2,3,4,5,6'.split(',')
@@ -15,11 +52,23 @@
 // 4.Write a function remove that accepts an array and an element, and returns an array with all ocurrences of element removed.
 
 // function remove(array, element) {
+	function remove (array,element){
+   
+   	for(var i=0 ; i < array.length ; i++){
+   		if(array[i] === element){
+   			array.slice(i);
+   			i-- ;
+   		}
+
+   	}
+       return array;
+
+   }
 //  // your code here
 //  }
 //  remove([1, 3, 6, 2, 3], 3); // => [1, 6, 2]
 // 5.Write a function evens that accepts an array as an argument, and returns an array consisting of all of the even numbers in that array.
-
+   
 // More Practice
 // 1.Write a function called average that takes an array of numbers as a parameter and returns the average of those numbers.
 

@@ -3,11 +3,19 @@ Longest String
 Given an array of strings, find the longest string and print out that string.
 hint: strings also have the .length property - i.e `"starburst".length` is 9
 */
+var arr =["firstname","lastname","pets","freinds"] ;
 
 // YOUR CODE GOES HERE
 
-function (arr){
+function longestString (arr){
+var strarr = arr.length
+var longest = strarr[0]
+for (var i = 0; i<arr.length ;i++){
+	if ( longest.length< strarr[0])
+		longest = strarr[i]
+}
 
+return longest;
 }
 
 // Will you make it?
@@ -19,6 +27,20 @@ function (arr){
 
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 };
+
+function itIsPossible (a){
+
+	var mpg = 25;
+
+  while ( a <= mpg ){
+  	
+  	return true ;
+
+  } 
+
+  	 return false;
+  }
+
 
 
 // Create a function called that accepts 2 string arguments and returns an integer of the count of occurrences the 2nd argument is found in the first one.
@@ -34,6 +56,18 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 // The second string argument will always be of length 1
 
 function strCount(str, letter){ 
+ 
+ var strCount = str.split("");
+var counter = 0 ;
+
+for ( var i = 0; i < str.length ; i++){
+	
+        if (str === letter){
+		  
+		  counter ++;
+        }
+	}
+	return counter;
 }
 
 
@@ -43,17 +77,41 @@ function strCount(str, letter){
 // You will be given an array of all the family members' ages, in any order. 
 // The ages will be given in whole numbers, so a baby of 5 months, will have an ascribed ‘age’ of 0. 
 // Return a new array with [youngest age, oldest age, difference between the youngest and oldest age].
+var Array=['age',5,'age',28,'age',46,'age',70];
 
 function differenceInAges(ages){
+
+var defference = Array [i];
+	for ( var i = 0; i < Array.length ; i++){
+		if (ages>=0){
+			
+			defference ++ ;
+
+		}
+	}
+return defference ;
 }
+
 
 
 
 // Take an array and remove every second element out of that array. Always keep the first element and start removing with the next element.
 
+
+var arr = [1,2,3,4,6,7,8];
+
 function removeEveryOther(arr){
-  //your code here
+ 
+  for(var i=0 ; i <= arr.length ; i+=2){ 
+ 	 	 if(arr[i]>=0){
+        arr.splice(i, 1);
+        i--;
+   }
+  }
+      return arr ;
 }
+  //your code here
+
 
 // Your task is to find the first element of an array that is not consecutive.
 
@@ -66,11 +124,22 @@ function removeEveryOther(arr){
 // The array will always have at least 2 elements1 and all elements will be numbers. The numbers will also all be unique and in ascending order.
 
 // The numbers could be positive or negative and the first non-consecutive could be either too!
-
+var arr = [1,2,3,4,6,7,8];
 function firstNonConsecutive (arr) {
 
-}
+        var number  = 0; 
+        for (i = 0; i <arr.length; i++){
+            number -= a[i]; 
+        }
 
+
+        return number; 
+    } 
+
+
+
+
+ 
 // A hero is on his way to the castle to complete his mission. However, 
 
 // he's been told that the castle is surrounded with a couple of powerful dragons! each dragon takes 2 bullets to be defeated, 
@@ -82,6 +151,13 @@ function firstNonConsecutive (arr) {
 // Return True if yes, False otherwise :)
 
 function hero(bullets, dragons){
+	var dragons = 2; 
+
+	while (bullets >= 4){
+
+		return true ;
+	}
+    return false;
 //Get Coding!
 }
 
@@ -101,7 +177,12 @@ function hero(bullets, dragons){
 // Make sure you cover the cases where certain words do not show up with correct capitalization. For example, getDrinkByProfession("pOLitiCIaN") should still return "Your tax dollars".
 
 function getDrinkByProfession(param){
+	var string = ("") ;
+	 for (var i = 0; i <string.length; i++){
+	 	param = i + " " + i++
 
+	}
+       return param ; 
 }
 
 // It's too hot, and they can't even…
@@ -123,7 +204,14 @@ function getDrinkByProfession(param){
 // divide(5) === false // 5 = 2 + 3
 // divide(6) === true  // 6 = 2 + 4
 
-function divide(){
+function divide(x,y){
+
+	while (x/y){
+		
+		return true;
+	}
+
+	 return false ;
 	// your Code HERE
 }
 
@@ -137,8 +225,14 @@ function divide(){
 // Note: You can expect all of the inputs to be the same length.
 
 function tripleTrouble(one, two, three){
-  //Solution
+
+while (str === str.length){
+    return one.split ('')
 }
+return string; 
+}
+  //Solution
+
 
 
 // You are given an array with positive numbers and a number N. You should find the N-th power of the element in the array with the index N. If N is outside of the array, then return -1. 
@@ -149,7 +243,15 @@ function tripleTrouble(one, two, three){
 // array = [1, 2, 3, 4] and N = 2, then the result is 3^2 == 9;
 // array = [1, 2, 3] and N = 3, but N is outside of the array, so the result is -1.
 
-function index(array, n){
+function index (array, n){
+	
+	var array =0;
+	for (var i = 0; i< array.length ; i++){
+		if (n===1){
+			array = n + i++
+		}
+		return n ;
+	}
   //your code here
 }
 
